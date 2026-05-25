@@ -15,58 +15,59 @@ export default function Hero() {
           bg-cover
           bg-center
           md:bg-center
-          brightness-125
-          contrast-110
-          saturate-110
-          scale-100 md:scale-105
+          bg-no-repeat
         "
         style={{
-          backgroundImage: "url('/images/Hero.jpg')",
+          backgroundImage: "url('/images/hero.jpg')",
         }}
       />
 
-      {/* Mobile Overlay */}
-      <div className="absolute inset-0 bg-black/20 md:bg-black/25" />
+      {/* Better Mobile Overlay */}
+      <div className="absolute inset-0 bg-black/45 md:bg-black/30" />
 
       {/* Luxury Gradient */}
       <div
         className="
           absolute inset-0
           bg-gradient-to-b
-          from-black/30
-          via-black/10
-          to-black/50
+          from-black/50
+          via-black/20
+          to-black/60
           md:bg-gradient-to-r
-          md:from-black/65
-          md:via-black/25
+          md:from-black/70
+          md:via-black/30
           md:to-transparent
         "
       />
 
       {/* Gold Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.10),transparent_30%)]" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
+      {/* Main Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10">
 
+        {/* Top Text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="
+            pt-28 md:pt-36
             uppercase
             tracking-[0.35em]
             text-yellow-400
-            text-xs sm:text-sm md:text-base
-            mb-4
-            pt-24 md:pt-32
+            text-xs
+            sm:text-sm
+            md:text-base
+            mb-5
           "
         >
           Premium Epoxy Flooring
         </motion.p>
 
+        {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="
@@ -77,12 +78,12 @@ export default function Hero() {
             leading-[0.95]
             text-white
             max-w-5xl
-            drop-shadow-[0_5px_20px_rgba(0,0,0,0.8)]
           "
         >
           Luxury Epoxy Flooring Solutions
         </motion.h1>
 
+        {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -93,20 +94,28 @@ export default function Hero() {
             text-base
             sm:text-lg
             md:text-2xl
-            max-w-2xl
             leading-relaxed
-            drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]
+            max-w-2xl
           "
         >
           High-end residential and commercial epoxy flooring
           designed for durability, elegance, and modern luxury.
         </motion.p>
 
+        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 mt-10"
+          transition={{ delay: 0.5 }}
+          className="
+            flex
+            flex-col
+            sm:flex-row
+            gap-4
+            mt-10
+            w-full
+            sm:w-auto
+          "
         >
           <button
             className="
@@ -116,7 +125,7 @@ export default function Hero() {
               py-4
               rounded-2xl
               font-bold
-              hover:scale-105
+              text-lg
               hover:bg-yellow-300
               transition
               duration-300
@@ -130,12 +139,13 @@ export default function Hero() {
             className="
               border
               border-white/20
-              backdrop-blur-md
               bg-white/10
+              backdrop-blur-md
               text-white
               px-8
               py-4
               rounded-2xl
+              text-lg
               hover:bg-white
               hover:text-black
               transition
@@ -151,9 +161,15 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-16 hidden md:flex items-center gap-4 text-zinc-300"
+          className="
+            hidden md:flex
+            items-center
+            gap-4
+            mt-20
+            text-zinc-300
+          "
         >
-          <div className="w-10 h-10 rounded-full border border-zinc-500 flex items-center justify-center backdrop-blur-sm bg-white/5">
+          <div className="w-10 h-10 rounded-full border border-zinc-500 flex items-center justify-center bg-white/5 backdrop-blur-sm">
             ↓
           </div>
 
