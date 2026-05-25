@@ -10,63 +10,141 @@ export default function Hero() {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
+        className="
+          absolute inset-0
+          bg-cover
+          bg-[center_right_30%]
+          md:bg-center
+          scale-100 md:scale-105
+          brightness-110
+          contrast-110
+        "
         style={{
           backgroundImage: "url('/images/Hero.jpg')",
         }}
       />
 
-      {/* Dark Luxury Overlay */}
-      <div className="absolute inset-0 bg-black/35" />
+      {/* Softer Overlay */}
+      <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
 
       {/* Cinematic Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" />
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-r
+          from-black/75
+          via-black/35
+          to-transparent
+          md:from-black/65
+          md:via-black/20
+        "
+      />
 
-      {/* Warm Glow */}
+      {/* Luxury Gold Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%)]" />
+
+      {/* Soft White Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_35%)]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-32">
 
+        {/* Small Label */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="uppercase tracking-[0.35em] text-yellow-400 text-sm md:text-base mb-6"
+          className="
+            uppercase
+            tracking-[0.35em]
+            text-yellow-400
+            text-xs sm:text-sm md:text-base
+            mb-5
+          "
         >
           Premium Epoxy Flooring
         </motion.p>
 
+        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.95] text-white max-w-5xl"
+          className="
+            text-4xl
+            sm:text-6xl
+            md:text-8xl
+            font-black
+            leading-[0.95]
+            text-white
+            max-w-5xl
+            drop-shadow-[0_5px_20px_rgba(0,0,0,0.8)]
+          "
         >
           Luxury Epoxy Flooring Solutions
         </motion.h1>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="mt-8 text-zinc-200 text-lg md:text-2xl max-w-2xl leading-relaxed"
+          className="
+            mt-6
+            text-zinc-200
+            text-base
+            sm:text-lg
+            md:text-2xl
+            max-w-2xl
+            leading-relaxed
+            drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]
+          "
         >
           High-end residential and commercial epoxy flooring
           designed for durability, elegance, and modern luxury.
         </motion.p>
 
+        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 mt-10"
         >
-          <button className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 hover:bg-yellow-300 transition duration-300 shadow-2xl">
+          <button
+            className="
+              bg-yellow-400
+              text-black
+              px-8
+              py-4
+              rounded-xl
+              font-bold
+              hover:scale-105
+              hover:bg-yellow-300
+              transition
+              duration-300
+              shadow-[0_10px_40px_rgba(250,204,21,0.25)]
+            "
+          >
             Get Free Quote
           </button>
 
-          <button className="border border-white/20 backdrop-blur-md bg-white/5 text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition duration-300">
+          <button
+            className="
+              border
+              border-white/20
+              backdrop-blur-md
+              bg-white/10
+              text-white
+              px-8
+              py-4
+              rounded-xl
+              hover:bg-white
+              hover:text-black
+              transition
+              duration-300
+            "
+          >
             View Services
           </button>
         </motion.div>
