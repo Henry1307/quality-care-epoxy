@@ -1,62 +1,49 @@
 "use client"
 
-import { motion } from "framer-motion"
-
-const links = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Expertise", href: "#expertise" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
-]
+import { useState } from "react"
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/50 backdrop-blur-2xl"
-    >
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-yellow-500/10">
+      <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
 
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <h1 className="text-2xl font-bold tracking-wide text-white">
+          QUALITY <span className="text-yellow-400">CARE</span>
+        </h1>
 
-        <a
-          href="#home"
-          className="text-3xl font-black tracking-wide"
-        >
-          QUALITY{" "}
-          <span className="text-yellow-400">
-            CARE
-          </span>
-        </a>
-
-        <div className="hidden md:flex items-center gap-10">
-
-          {links.map((link, index) => (
-            <motion.a
-              key={index}
-              href={link.href}
-              whileHover={{ y: -2 }}
-              className="text-zinc-300 hover:text-yellow-400 transition text-sm uppercase tracking-[0.25em]"
-            >
-              {link.name}
-            </motion.a>
-          ))}
-
+        <div className="hidden md:flex gap-10 text-white">
+          <a href="#home" className="hover:text-yellow-400 transition">Home</a>
+          <a href="#services" className="hover:text-yellow-400 transition">Services</a>
+          <a href="#gallery" className="hover:text-yellow-400 transition">Gallery</a>
+          <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
         </div>
 
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          href="#contact"
-          className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold hidden md:block"
-        >
+        <button className="hidden md:block bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
           Get Quote
-        </motion.a>
+        </button>
 
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white text-3xl"
+        >
+          ☰
+        </button>
       </div>
 
-    </motion.nav>
+      {open && (
+        <div className="md:hidden bg-black border-t border-yellow-400/20 px-6 py-6 flex flex-col gap-5 text-white text-lg">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+
+          <button className="bg-yellow-400 text-black py-3 rounded-xl font-semibold mt-3">
+            Get Quote
+          </button>
+        </div>
+      )}
+    </nav>
   )
 }
