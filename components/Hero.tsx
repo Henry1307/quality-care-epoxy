@@ -10,44 +10,44 @@ export default function Hero() {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center brightness-110 contrast-125 saturate-110 scale-105"
+        className="absolute inset-0 bg-cover bg-center brightness-75 contrast-125 saturate-125 scale-105"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop')",
         }}
       />
 
-      {/* Soft Dark Overlay */}
-      <div className="absolute inset-0 bg-black/10" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Cinematic Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
 
       {/* Gold Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.15),transparent_30%)]" />
 
       {/* Soft White Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_35%)]" />
 
-      {/* Main Content */}
+      {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-32">
 
-        {/* Small Text */}
+        {/* Top Label */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="uppercase tracking-[0.35em] text-yellow-400 text-sm md:text-base mb-6"
+          className="uppercase tracking-[0.4em] text-yellow-400 text-sm md:text-base mb-6"
         >
           Premium Epoxy Flooring
         </motion.p>
 
-        {/* Heading */}
+        {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.95] text-zinc-100 max-w-5xl"
+          className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.92] text-zinc-100 max-w-5xl"
         >
           Luxury Epoxy
           <br />
@@ -62,7 +62,7 @@ export default function Hero() {
           className="mt-8 text-zinc-200 text-lg md:text-2xl max-w-2xl leading-relaxed"
         >
           High-end residential and commercial epoxy flooring
-          designed for durability, elegance, and modern luxury.
+          with luxury finishes, durability, and modern aesthetics.
         </motion.p>
 
         {/* Buttons */}
