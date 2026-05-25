@@ -8,12 +8,11 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background Image */}
+     {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center brightness-75 contrast-125 saturate-125 scale-105"
+        className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop')",
+          backgroundImage: "url('/images/Hero.jpg')",
         }}
       />
 
