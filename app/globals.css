@@ -7,53 +7,15 @@ html {
 body {
   background: #000;
   color: white;
-  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
+::selection {
   background: #facc15;
-  border-radius: 999px;
-}
-
-/* SMOOTH FADE */
-
-section {
-  position: relative;
-}
-
-/* GLOW */
-
-.glow {
-  box-shadow:
-    0 0 20px rgba(250, 204, 21, 0.5),
-    0 0 60px rgba(250, 204, 21, 0.3);
-}
-
-/* HERO ANIMATION */
-
-@keyframes slowZoom {
-  0% {
-    transform: scale(1.08);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-slowZoom {
-  animation: slowZoom 8s ease forwards;
+  color: black;
 }

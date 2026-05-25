@@ -8,25 +8,32 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop')",
         }}
       />
 
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/45" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+      {/* Luxury Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 md:pt-24">
+      {/* Gold Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%)]" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-32">
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="uppercase tracking-[0.4em] text-yellow-400 text-sm md:text-base mb-5"
+          transition={{ duration: 0.6 }}
+          className="uppercase tracking-[0.35em] text-yellow-400 text-sm md:text-base mb-6"
         >
           Premium Epoxy Flooring
         </motion.p>
@@ -34,8 +41,8 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl sm:text-6xl md:text-8xl font-black leading-none text-white max-w-4xl"
+          transition={{ duration: 0.9 }}
+          className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.95] text-white max-w-5xl"
         >
           Luxury Epoxy Flooring Solutions
         </motion.h1>
@@ -43,26 +50,42 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
           className="mt-8 text-zinc-300 text-lg md:text-2xl max-w-2xl leading-relaxed"
         >
           High-end residential and commercial epoxy flooring
-          with luxury finishes, durability, and modern aesthetics.
+          designed for durability, elegance, and modern luxury.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 mt-10"
         >
-          <button className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
+          <button className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 hover:bg-yellow-300 transition duration-300 shadow-2xl">
             Get Free Quote
           </button>
 
-          <button className="border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
+          <button className="border border-white/20 backdrop-blur-md bg-white/5 text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition duration-300">
             View Services
           </button>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="mt-20 hidden md:flex items-center gap-4 text-zinc-400"
+        >
+          <div className="w-10 h-10 rounded-full border border-zinc-600 flex items-center justify-center">
+            ↓
+          </div>
+
+          <span className="tracking-[0.3em] uppercase text-xs">
+            Scroll
+          </span>
         </motion.div>
       </div>
     </section>
