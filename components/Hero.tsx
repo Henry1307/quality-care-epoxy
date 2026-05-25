@@ -23,23 +23,21 @@ export default function Hero() {
       />
 
       {/* Better Mobile Overlay */}
-      <div className="absolute inset-0 bg-black/45 md:bg-black/30" />
+      <div className="absolute inset-0 bg-black/45 md:bg-black/15" />
 
-      {/* Luxury Gradient */}
       <div
-        className="
-          absolute inset-0
-          bg-gradient-to-b
-          from-black/50
-          via-black/20
-          to-black/60
-          md:bg-gradient-to-r
-          md:from-black/70
-          md:via-black/30
-          md:to-transparent
-        "
-      />
-
+  className="
+    absolute inset-0
+    bg-gradient-to-b
+    from-black/25
+    via-black/5
+    to-black/35
+    md:bg-gradient-to-r
+    md:from-black/50
+    md:via-black/10
+    md:to-transparent
+  "
+/>
       {/* Gold Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.10),transparent_30%)]" />
 
