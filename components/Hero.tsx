@@ -13,43 +13,42 @@ export default function Hero() {
         className="
           absolute inset-0
           bg-cover
-          bg-[center_right_30%]
+          bg-center
           md:bg-center
-          scale-100 md:scale-105
-          brightness-110
+          brightness-125
           contrast-110
+          saturate-110
+          scale-100 md:scale-105
         "
         style={{
           backgroundImage: "url('/images/Hero.jpg')",
         }}
       />
 
-      {/* Softer Overlay */}
-      <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
+      {/* Mobile Overlay */}
+      <div className="absolute inset-0 bg-black/20 md:bg-black/25" />
 
-      {/* Cinematic Gradient */}
+      {/* Luxury Gradient */}
       <div
         className="
           absolute inset-0
-          bg-gradient-to-r
-          from-black/75
-          via-black/35
-          to-transparent
+          bg-gradient-to-b
+          from-black/30
+          via-black/10
+          to-black/50
+          md:bg-gradient-to-r
           md:from-black/65
-          md:via-black/20
+          md:via-black/25
+          md:to-transparent
         "
       />
 
-      {/* Luxury Gold Glow */}
+      {/* Gold Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%)]" />
 
-      {/* Soft White Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_35%)]" />
-
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
 
-        {/* Small Label */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,19 +58,19 @@ export default function Hero() {
             tracking-[0.35em]
             text-yellow-400
             text-xs sm:text-sm md:text-base
-            mb-5
+            mb-4
+            pt-24 md:pt-32
           "
         >
           Premium Epoxy Flooring
         </motion.p>
 
-        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="
-            text-4xl
+            text-5xl
             sm:text-6xl
             md:text-8xl
             font-black
@@ -84,7 +83,6 @@ export default function Hero() {
           Luxury Epoxy Flooring Solutions
         </motion.h1>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -104,7 +102,6 @@ export default function Hero() {
           designed for durability, elegance, and modern luxury.
         </motion.p>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -117,7 +114,7 @@ export default function Hero() {
               text-black
               px-8
               py-4
-              rounded-xl
+              rounded-2xl
               font-bold
               hover:scale-105
               hover:bg-yellow-300
@@ -138,7 +135,7 @@ export default function Hero() {
               text-white
               px-8
               py-4
-              rounded-xl
+              rounded-2xl
               hover:bg-white
               hover:text-black
               transition
@@ -154,7 +151,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-20 hidden md:flex items-center gap-4 text-zinc-300"
+          className="mt-16 hidden md:flex items-center gap-4 text-zinc-300"
         >
           <div className="w-10 h-10 rounded-full border border-zinc-500 flex items-center justify-center backdrop-blur-sm bg-white/5">
             ↓
