@@ -36,7 +36,6 @@ export default function Navbar() {
         <div className="md:hidden bg-black border-t border-yellow-400/20 px-6 py-6 flex flex-col gap-5 text-white text-lg">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
 
           <button className="bg-yellow-400 text-black py-3 rounded-xl font-semibold mt-3">
